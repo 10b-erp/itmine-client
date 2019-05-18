@@ -6,10 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about-us.component.css']
 })
 
-export const theme: Theme = {
-  name: ''
-}
-
 export class AboutUsComponent implements OnInit {
 
   constructor() { }
