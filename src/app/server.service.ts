@@ -6,15 +6,20 @@ import { Injectable } from '@angular/core';
 export class ServerService {
 
   // private function to run api call
-  private makeApiCall(endpoint: string, data: any): Promise<any> {
+  private makeApiCall(endpoint: string, data: any): Promise<ServerResponse> {
     return new Promise((resolve, reject) => {
       const xhr = new XMLHttpRequest();
-      xhr.addEventListener('load', response => {
-        resolve(response);
+      xhr.addEventListener('load', function() {
+        if (this.response.errorCode !== 0) {
+          resolve(this.response);
+        } else {
+          reject(this.response);
+        }
       });
-      xhr.addEventListener('error', err => {
-        reject(err);
+      xhr.addEventListener('error', function() {
+        reject(this.response);
       });
+      xhr.responseType = 'json';
       xhr.open('POST', '/api/' + endpoint);
       xhr.send(data);
     });
