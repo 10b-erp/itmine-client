@@ -12,6 +12,9 @@ import { ReturnComponent } from './return/return.component';
 import { NewProductsComponent } from './new-products/new-products.component';
 import { TrackersComponent } from './trackers/trackers.component';
 import { ContactComponent } from './contact/contact.component';
+import {FormsModule} from '@angular/forms';
+import { AddressFormComponent } from './address-form/address-form.component';
+import {ServerService} from './server.service';
 
 @NgModule({
   declarations: [
@@ -24,13 +27,16 @@ import { ContactComponent } from './contact/contact.component';
     ReturnComponent,
     NewProductsComponent,
     TrackersComponent,
-    ContactComponent
+    ContactComponent,
+    PageNotFoundComponent,
+    AddressFormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [ServerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

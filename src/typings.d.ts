@@ -1,0 +1,3 @@
+interface ServerResponse {
+  errorCode: number;
+}
