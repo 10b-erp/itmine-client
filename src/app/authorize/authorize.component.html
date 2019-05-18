@@ -14,13 +14,16 @@
             <input class='form-control' type='password' [(ngModel)]='userPassword'>
           </label>
         </div>
-        <div class='card mb-3'>
-          <div class='card-body'>
-            <app-address-form></app-address-form>
+        <div class='collapse' id='toggleSignup'>
+          <div class='card mb-3' >
+            <div class='card-body'>
+              <app-address-form></app-address-form>
+            </div>
           </div>
         </div>
         <div class='form-group'>
-          <button class='btn btn-outline-primary' type='submit' (click)='signIn()'>Sign Up</button>
+          <button class='btn btn-outline-primary mr-3' type='submit' (click)='signIn()'>Sign Up</button>
+          <button class='btn btn-outline-primary' type='button' data-toggle='collapse' data-target='#toggleSignup'>Toggle</button>
         </div>
       </div>
     </div>
