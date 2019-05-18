@@ -1,3 +1,3 @@
-declare interface ServerResponse {
+interface ServerResponse {
   errorCode: number;
 }

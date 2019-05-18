@@ -7,20 +7,23 @@ import {AppRoutingModule} from './app-routing.module';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import {FormsModule} from '@angular/forms';
+import { AddressFormComponent } from './address-form/address-form.component';
+import {ServerService} from './server.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthorizeComponent,
     WelcomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AddressFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ServerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
