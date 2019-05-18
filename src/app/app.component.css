@@ -1,16 +1,19 @@
 :root {
   --dark: #5680E9;
   --light: #84CEEB;
-  --bright:#5AB9EA;
+  --bright: #5AB9EA;
   --pale: #C1C8E4;
   --contrast: #8860D0;
 }
 
-#header {
+#header{
   height: 100px;
-  color: var(--bright);
 }
 
 .nav-pills {
   margin-right: 40px;
+}
+
+#home {
+  color: var();
 }
