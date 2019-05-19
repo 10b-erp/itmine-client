@@ -1,0 +1,36 @@
+
+#header{
+  height: 100px;
+}
+
+.nav-pills {
+  margin-right: 40px;
+}
+
+#home {
+  color: #8860D0;
+}
+
+ul.nav a:hover {
+  color: #8860D0 !important;
+}
+button {
+  position: fixed;
+  right: 50px;
+  color: white;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  background-color: #8860D0;
+  border-radius: 50%;
+  font-size: 30px;
+  transition: .5s;
+  margin-top: 20px;
+}
+
+button:hover{
+  background-color: #5680E9;
+  width: 70px;
+  height: 70px;
+  opacity: 0.5;
+}

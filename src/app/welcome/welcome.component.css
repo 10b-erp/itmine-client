@@ -1,1 +1,36 @@
+#authenticate li{
+  position: relative;
+  float: right;
+  margin-right: 20px;
+  display: inline-block;
+}
 
+.display-2 {
+  color: #5AB9EA;
+}
+
+div li{
+  text-decoration: none;
+}
+
+.btn-primary{
+  margin: 20px;
+  background-color: white;
+  color: #5AB9EA;
+  border-color: #84CEEB;
+}
+
+h5 {
+  text-align: center;
+  font-size: 30px;
+}
+
+.row {
+  margin-top: 30px;
+  padding-top: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: #5AB9EA;
+}
