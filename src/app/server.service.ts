@@ -94,4 +94,9 @@ export class ServerService {
     return this.makeApiCall('orderpps', { n: numPPs });
   }
 
+  // check if sid exists
+  public checkSid(sid: string) {
+    return this.makeApiCall('checksid', { sid: sid });
+  }
+
 }
