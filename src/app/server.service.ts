@@ -47,8 +47,8 @@ export class ServerService {
   }
 
   // validate address using shipengine api
-  public validateAddress(address): Promise<AddressServerResponse> {
-    return <Promise<AddressServerResponse>> this.makeApiCall('validateaddress', address);
+  public validateAddress(address): Promise<any> {
+    return <Promise<any>> this.makeApiCall('validateaddress', address);
   }
 
   // check if signed in
