@@ -1,3 +1,50 @@
-<p>
-  trackers works!
-</p>
+<div class='jumbotron-fluid'>
+  <div class='container'>
+
+    <h1>Package management</h1>
+
+    <!-- order a package -->
+    <div class='card my-5'>
+      <div class='card-header'>
+        <label for='numOrders' class='mb-0'>Order package protection code</label>
+      </div>
+      <div class='card-body'>
+        <div class='input-group'>
+          <input class='form-control' id='numOrders' type='number' placeholder='Quantity' [(ngModel)]='numOrders' min='0' max='10' step='1'>
+          <div class='input-group-append'>
+            <button class='btn btn-outline-secondary' (click)='orderPPs()'>Order</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- manage packages -->
+    <div class='card'>
+      <div class='card-header'>
+        <label class='mb-0'>List of purchased package protection codes</label>
+      </div>
+      <div class='card-body overflow-auto' style='max-height: 30em'>
+        <table class='table table-hover'>
+          <thead>
+          <tr>
+            <th>PID</th>
+            <th>Purchase Date</th>
+            <th>Tracking Info</th>
+            <th>Deactivate</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor='let package of packages'>
+            <td>{{ package._id }}</td>
+            <td>{{ package.purchaseDate | date:'medium' }}</td>
+            <td>{{ package.trackingInfo || 'N/A' }}</td>
+            <td><button class='btn btn-danger' type='button'>×</button></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+      </div>
+    </div>
+

@@ -76,4 +76,20 @@ export class ServerService {
       });
   }
 
+  // get user's packages
+  public getPackages() {
+    this.makeApiCall('packages', {})
+      .then(response => this.packagesObservable.next(response))
+      .catch(err => console.error(err));
+  }
+  public packagesObservable = new BehaviorSubject<any>(null);
+  public getPackagesObservable() {
+    return this.packagesObservable;
+  }
+
+  // order new pps
+  public orderPPs(numPPs: number) {
+    return this.makeApiCall('orderpps', { n: numPPs });
+  }
+
 }
