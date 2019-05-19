@@ -1,3 +1,54 @@
+<<<<<<< HEAD
+#TheBox{
+  max-width: 100% !important;
+  overflow-x: hidden;
+}
+#authenticate li{
+  margin-right: 30px;
+  display: inline-block;
+}
+
+div h1{
+  margin-top: -160px;
+}
+
+.display-2 {
+  color:  #5680E9;
+}
+
+div li{
+  text-decoration: none;
+}
+
+.btn-primary{
+  margin: 20px;
+  background-color: white;
+  color: #5AB9EA;
+  border-color: #84CEEB;
+}
+
+h5 {
+  text-align: center;
+  font-size: 30px;
+}
+
+.row {
+  margin-top: 30px;
+  padding-top: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: #5AB9EA;
+}
+
+img {
+  height: 400px;
+  width: 400px;
+}
+
+=======
+>>>>>>> a1ac6c29f3f0b19f0f6757574a738135040e52c1
 #logo img {
   transform: rotate(45deg);
   margin-top: -100px;
@@ -20,4 +71,8 @@
   animation-duration: 5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
+}
+
+.card-img-top{
+  justify: middle;
 }
