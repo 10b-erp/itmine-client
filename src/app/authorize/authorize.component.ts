@@ -12,6 +12,9 @@ export class AuthorizeComponent implements OnInit {
 
   public userEmail: string;
   public userPassword: string;
+  public userName: string;
+  public userPhone: string;
+  public companyName: string;
 
   public address = {
     addressLine1: '',
@@ -30,10 +33,20 @@ export class AuthorizeComponent implements OnInit {
   signIn() {
     this.server.signIn(this.userEmail, this.userPassword)
       .then(response => {
-        // handle successful signing in
+        console.log('successfully signed in');
       })
       .catch(err => {
-        // handle unsuccessful signing in
+        console.error('Error signing in: ' + err.errorMessage);
+      });
+  }
+
+  signUp() {
+    this.server.signUp(this.userEmail, this.userPassword, this.userName, this.userPhone, this.address, this.companyName)
+      .then(response => {
+        console.log('successfully signed up');
+      })
+      .catch(err => {
+        console.error('Error signing up: ' + err.errorMessage);
       });
   }
 
