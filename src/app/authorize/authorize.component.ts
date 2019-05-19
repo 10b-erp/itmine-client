@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ServerService} from '../server.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-authorize',
@@ -8,7 +9,7 @@ import {ServerService} from '../server.service';
 })
 export class AuthorizeComponent implements OnInit {
 
-  constructor(private server: ServerService) { }
+  constructor(private server: ServerService, private router: Router) { }
 
   public userEmail: string;
   public userPassword: string;
@@ -34,6 +35,8 @@ export class AuthorizeComponent implements OnInit {
     this.server.signIn(this.userEmail, this.userPassword)
       .then(response => {
         console.log('successfully signed in');
+        this.server.getUserDetails();
+        this.router.navigateByUrl('/');
       })
       .catch(err => {
         console.error('Error signing in: ' + err.errorMessage);
@@ -44,6 +47,8 @@ export class AuthorizeComponent implements OnInit {
     this.server.signUp(this.userEmail, this.userPassword, this.userName, this.userPhone, this.address, this.companyName)
       .then(response => {
         console.log('successfully signed up');
+        this.server.getUserDetails();
+        this.router.navigateByUrl('/');
       })
       .catch(err => {
         console.error('Error signing up: ' + err.errorMessage);
