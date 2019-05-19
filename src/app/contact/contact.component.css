@@ -1,0 +1,22 @@
+#bq2{
+  transform: rotate(90deg);
+}
+#bq3{
+  transform: rotate(180deg);
+}
+#bq4{
+  transform: rotate(270deg);
+}
+
+.column{
+  margin: 0 auto;
+}
+
+h2{
+  margin: 30px;
+  color: #5AB9EA;
+}
+
+ul li {
+  list-style: none;
+}
