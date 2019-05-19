@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './track.component.html',
   styleUrls: ['./track.component.css']
 })
-export class TrackComponent implements OnInit {
+export class FoundComponent implements OnInit {
 
   constructor() { }
 

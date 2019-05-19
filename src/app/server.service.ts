@@ -8,6 +8,9 @@ export class ServerService {
 
   // observable to track when signed in
   public userDetails = new BehaviorSubject<any>(null);
+  public packagesObservable = new BehaviorSubject<any>(null);
+
+  public baseUrl = 'https://itmine.herokuapp.com/';
 
   // private function to run api call
   private makeApiCall(endpoint: string, data: any): Promise<ServerResponse> {
@@ -82,7 +85,6 @@ export class ServerService {
       .then(response => this.packagesObservable.next(response))
       .catch(err => console.error(err));
   }
-  public packagesObservable = new BehaviorSubject<any>(null);
   public getPackagesObservable() {
     return this.packagesObservable;
   }

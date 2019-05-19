@@ -27,17 +27,17 @@
         <table class='table table-hover'>
           <thead>
           <tr>
-            <th>PID</th>
+            <th>QR Code</th>
             <th>Purchase Date</th>
             <th>Tracking Info</th>
             <th>Deactivate</th>
           </tr>
           </thead>
           <tbody>
-          <tr *ngFor='let package of packages'>
-            <td>{{ package._id }}</td>
-            <td>{{ package.purchaseDate | date:'medium' }}</td>
-            <td>{{ package.trackingInfo || 'N/A' }}</td>
+          <tr *ngFor='let pack of packages'>
+            <td><img [src]='pack.qrCode'></td>
+            <td>{{ pack.purchaseDate | date:'medium' }}</td>
+            <td>{{ pack.trackingInfo || 'N/A' }}</td>
             <td><button class='btn btn-danger' type='button'>×</button></td>
           </tr>
           </tbody>

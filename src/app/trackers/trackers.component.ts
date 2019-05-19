@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ServerService} from '../server.service';
+import {text} from '@angular/core/src/render3';
 
 @Component({
   selector: 'app-trackers',
@@ -27,6 +28,10 @@ export class TrackersComponent implements OnInit {
     this.server.getPackagesObservable().subscribe(update => {
       if (update !== null) {
         this.packages = update.additionalData;
+        this.packages.forEach(pack => {
+          const data = this.server.baseUrl + '/found?sid=' + pack._id.toString();
+          pack.qrCode = 'https://chart.googleapis.com/chart?cht=qr&chs=128x128&chl=' + encodeURI(data);
+        });
       }
     });
     this.server.getPackages();
