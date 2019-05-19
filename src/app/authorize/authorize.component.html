@@ -17,11 +17,7 @@
           </div>
         </div>
         <div class='collapse' id='toggleSignup'>
-          <div class='card mb-3' >
-            <div class='card-body'>
-              <app-address-form></app-address-form>
-            </div>
-          </div>
+          <app-address-form [(address)]='address'></app-address-form>
         </div>
         <div class='form-group'>
           <button class='btn btn-outline-primary mb-3' type='submit' (click)='signIn()'>{{ this.signInOut ? 'Sign up' : 'Sign in' }}</button>

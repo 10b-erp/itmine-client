@@ -1,40 +1,47 @@
-<div class='form-group'>
-  <label class='d-block'>
-    Address Line 1
-    <input class='form-control' type='text' [(ngModel)]='addressLine1'>
-  </label>
-</div>
-<div class='form-row'>
-  <div class='form-group col-12 col-md-8'>
-    <label class='d-block'>
-      Address Line 2
-      <input class='form-control' type='text' [(ngModel)]='addressLine2'>
-    </label>
+<div class='card mb-3' >
+  <div class='card-header' style='height: 10em'>
+    <img [src]='addressMap'>
   </div>
-  <div class='form-group col-12 col-md-4'>
-    <label class='d-block'>
-      Country
-      <input class='form-control' type='text' disabled [(ngModel)]='countryCode'>
-    </label>
-  </div>
-</div>
-<div class='form-group form-row'>
-  <div class='col-12 col-md-6'>
-    <label class='d-block'>
-      City / Locality
-      <input class='form-control' type='text' [(ngModel)]='cityLocality'>
-    </label>
-  </div>
-  <div class='form-group col-12 col-md-4'>
-    <label class='d-block'>
-      State / Province
-      <input class='form-control' type='text' [(ngModel)]='stateProvince'>
-    </label>
-  </div>
-  <div class='form-group col-12 col-md-2'>
-    <label class='d-block'>
-      Postal Code
-      <input class='form-control' type='text' [(ngModel)]='postalCode'>
-    </label>
+  <div class='card-body'>
+    <div class='form-group'>
+      <label class='d-block'>
+        Address Line 1
+        <input class='form-control' type='text' [(ngModel)]='addressLine1' (change)='onAddressChanged()'>
+      </label>
+    </div>
+    <div class='form-row'>
+      <div class='form-group col-12 col-md-8'>
+        <label class='d-block'>
+          Address Line 2
+          <input class='form-control' type='text' [(ngModel)]='addressLine2' (change)='onAddressChanged()'>
+        </label>
+      </div>
+      <div class='form-group col-12 col-md-4'>
+        <label class='d-block'>
+          Country
+          <input class='form-control' type='text' disabled [(ngModel)]='countryCode' (change)='onAddressChanged()'>
+        </label>
+      </div>
+    </div>
+    <div class='form-group form-row'>
+      <div class='col-12 col-md-6'>
+        <label class='d-block'>
+          City / Locality
+          <input class='form-control' type='text' [(ngModel)]='cityLocality' (change)='onAddressChanged()'>
+        </label>
+      </div>
+      <div class='form-group col-12 col-md-4'>
+        <label class='d-block'>
+          State / Province
+          <input class='form-control' type='text' [(ngModel)]='stateProvince' (change)='onAddressChanged()'>
+        </label>
+      </div>
+      <div class='form-group col-12 col-md-2'>
+        <label class='d-block'>
+          Postal Code
+          <input class='form-control' type='text' [(ngModel)]='postalCode' (change)='onAddressChanged()'>
+        </label>
+      </div>
+    </div>
   </div>
 </div>

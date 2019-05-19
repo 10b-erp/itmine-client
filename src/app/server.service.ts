@@ -32,4 +32,7 @@ export class ServerService {
     });
   }
 
+  public validateAddress(address) {
+    return this.makeApiCall('validateaddress', address);
+  }
 }

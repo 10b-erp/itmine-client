@@ -13,6 +13,15 @@ export class AuthorizeComponent implements OnInit {
   public userEmail: string;
   public userPassword: string;
 
+  public address = {
+    addressLine1: '',
+    addressLine2: '',
+    cityLocality: '',
+    stateProvince: '',
+    postalCode: '',
+    countryCode: 'US'
+  };
+
   public signInOut = false;
 
   ngOnInit() {
