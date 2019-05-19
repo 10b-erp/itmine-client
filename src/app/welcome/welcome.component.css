@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #TheBox{
   max-width: 100% !important;
   overflow-x: hidden;
@@ -46,6 +47,8 @@ img {
   width: 400px;
 }
 
+=======
+>>>>>>> a1ac6c29f3f0b19f0f6757574a738135040e52c1
 #logo img {
   transform: rotate(45deg);
   margin-top: -100px;
