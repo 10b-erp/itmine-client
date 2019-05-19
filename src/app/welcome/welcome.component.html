@@ -1,53 +1,72 @@
-<div id="TheBox">
+<div class='jumbotron-fluid'>
+  <div class='container'>
 
+    <!-- header text -->
     <div class="row d-flex justify-content-center">
       <h1 class="display-2 text-center">ItMine</h1>
     </div>
 
-    <div id="logo">
-        <div class="flex-column text-center row">
-          <div class="p-2"><img src="assets/ItMineLogo.jpeg" class="rounded text-center" alt=""></div>
-          <div class="p-2"><a routerLink="/trackers"><button type="button" class="btn btn-primary">It's Mine</button></a></div>
-        </div>
+    <!-- logo image -->
+    <div class="flex-column text-center row">
+      <img src="/assets/ItMineLogo.jpeg" class="rounded text-center d-block mx-auto" alt="" style='width: 20em'>
+      <a routerLink="/trackers">
+        <button type="button" class="btn btn-primary">It's Mine</button>
+      </a>
     </div>
 
-    <div class="row">
-      <div class="card column mx-auto p-2" style="width:45%;">
-        <img class="card-img-top" src="" alt="">
-        <a routerLink="/return">
-          <div class="card-body">
-            <h5 class="card-title">Return Lost Items</h5>
-          </div>
-        </a>
-      </div>
-
-      <div class="card column mx-auto p-2" style="width:45%;">
-        <img class="card-img-top" src="" alt="">
-        <a routerLink="/hiw">
-          <div class="card-body">
-            <h5 class="card-title">How It Works</h5>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <div class="row">
-        <div class="card column mx-auto p-2" style="width:45%;">
-          <img class="card-img-top" src="" alt="">
-          <a routerLink="/about">
-            <div class="card-body">
-              <h5 class="card-title">About Us</h5>
-            </div>
-          </a>
-        </div>
-      <div class="card column mx-auto p-2" style="width:45%;">
-          <img class="card-img-top" src="" alt="">
-          <a routerLink="/contact">
-            <div class="card-body">
-              <h5 class="card-title">FAQs</h5>
-            </div>
-          </a>
-        </div>
-    </div>
+  </div>
 </div>
+
+<div class='jumbotron jumbotron-fluid'>
+  <div class='container'>
+    <div class="row">
+
+      <div class='col-12 col-md-6 col-xl-3'>
+        <a href='/track'>
+          <div class="card mb-5">
+            <img class="card-img-top" src="" alt="" style='height: 10em;'>
+            <div class="card-body">
+              <p class='lead text-center'>Return Lost Items</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class='col-12 col-md-6 col-xl-3'>
+        <a href='hiw'>
+          <div class="card mb-5">
+            <img class="card-img-top" src="" alt="" style='height: 10em;'>
+            <div class="card-body">
+              <p class="lead text-center">How It Works</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class='col-12 col-md-6 col-xl-3'>
+        <a href='/about'>
+          <div class="card mb-5">
+            <img class="card-img-top" src="" alt="" style='height: 10em;'>
+            <div class="card-body">
+              <p class="lead text-center">About Us</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class='col-12 col-md-6 col-xl-3'>
+        <a href='/contact'>
+          <div class="card mb-5">
+            <img class="card-img-top" src="" alt="" style='height: 10em;'>
+            <div class="card-body">
+              <p class='lead text-center'>FAQs</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
 
