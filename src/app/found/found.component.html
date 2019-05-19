@@ -16,11 +16,11 @@
       <div class="card-body">
 
         <div class="form-group">
-          <label for="exampleInputEmail1">Approximate Weight</label>
-          <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter weight" [(ngModel)]="weight">
+          <label for="weightInput">Weight</label>
+          <input type="number" class="form-control" aria-describedby="emailHelp" placeholder="Enter weight" id='weightInput' name='weightInput' [(ngModel)]="weight">
         </div>
         <div class="form-group">
-          <button type="button" class="btn btn-info" (click)="setWeight()" [disabled]="isInvalidSid">Measured Weight</button>
+          <button type="button" class="btn btn-info" (click)="setWeight()" [disabled]="isInvalidSid">Set Weight</button>
         </div>
 
       </div>

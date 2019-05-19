@@ -19,7 +19,13 @@ export class FoundComponent implements OnInit {
 
   public setWeight() {
     if(!this.isInvalidSid) {
-      this.server.setPackageWeight(this.sid, this.weight);
+      this.server.setPackageWeight(this.sid, this.weight)
+        .then(response => {
+          console.log(response.additionalData);
+        })
+        .catch(err => {
+          console.log(err.errorMessage);
+        });
     }
   }
 

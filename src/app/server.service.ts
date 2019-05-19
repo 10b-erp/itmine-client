@@ -103,7 +103,7 @@ export class ServerService {
   public setPackageGiftEmail(sid: string, giftEmail: string) {
     return this.makeApiCall('setpackagegiftemail', { sid: sid, giftEmail: giftEmail });
   }
-  public setPackageWeight(sid: string, weight: string) {
+  public setPackageWeight(sid: string, weight: number) {
     return this.makeApiCall('setpackageweight', { sid: sid, weight: weight });
   }
 
