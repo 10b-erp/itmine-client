@@ -99,4 +99,12 @@ export class ServerService {
     return this.makeApiCall('checksid', { sid: sid });
   }
 
+  // set package data
+  public setPackageGiftEmail(sid: string, giftEmail: string) {
+    return this.makeApiCall('setpackagegiftemail', { sid: sid, giftEmail: giftEmail });
+  }
+  public setPackageWeight(sid: string, weight: string) {
+    return this.makeApiCall('setpackageweight', { sid: sid, weight: weight });
+  }
+
 }
