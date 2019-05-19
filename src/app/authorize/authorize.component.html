@@ -2,17 +2,19 @@
   <div class='container'>
     <div class='card'>
       <div class='card-body'>
-        <div class='form-group'>
-          <label>
-            Email
-            <input class='form-control' type='email' [(ngModel)]='userEmail'>
-          </label>
-        </div>
-        <div class='form-group'>
-          <label>
-            Password
-            <input class='form-control' type='password' [(ngModel)]='userPassword'>
-          </label>
+        <div class='form-row'>
+          <div class='form-group col-12 col-md-6'>
+            <label class='d-block'>
+              Email
+              <input class='form-control' type='email' [(ngModel)]='userEmail'>
+            </label>
+          </div>
+          <div class='form-group col-12 col-md-6'>
+            <label class='d-block'>
+              Password
+              <input class='form-control' type='password' [(ngModel)]='userPassword'>
+            </label>
+          </div>
         </div>
         <div class='collapse' id='toggleSignup'>
           <div class='card mb-3' >
@@ -22,8 +24,8 @@
           </div>
         </div>
         <div class='form-group'>
-          <button class='btn btn-outline-primary mr-3' type='submit' (click)='signIn()'>Sign Up</button>
-          <button class='btn btn-outline-primary' type='button' data-toggle='collapse' data-target='#toggleSignup'>Toggle</button>
+          <button class='btn btn-outline-primary mb-3' type='submit' (click)='signIn()'>{{ this.signInOut ? 'Sign up' : 'Sign in' }}</button>
+          <small class='form-text text-muted'>{{ this.signInOut ? 'Not signed up?' : 'Signed up already?' }} <a class='' data-toggle='collapse' href='#toggleSignup' (click)='toggleSignInOut()'>{{ this.signInOut ? 'Sign in' : 'Sign up' }}</a>.</small>
         </div>
       </div>
     </div>

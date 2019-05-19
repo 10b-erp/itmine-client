@@ -13,6 +13,8 @@ export class AuthorizeComponent implements OnInit {
   public userEmail: string;
   public userPassword: string;
 
+  public signInOut = false;
+
   ngOnInit() {
   }
 
@@ -24,5 +26,9 @@ export class AuthorizeComponent implements OnInit {
       .catch(err => {
         // handle unsuccessful signing in
       });
+  }
+
+  toggleSignInOut() {
+    this.signInOut = !this.signInOut;
   }
 }
