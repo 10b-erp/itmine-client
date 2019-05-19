@@ -12,7 +12,7 @@ div h1{
 }
 
 .display-2 {
-  color: #5AB9EA;
+  color:  #5680E9;
 }
 
 div li{
@@ -68,4 +68,8 @@ img {
   animation-duration: 5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
+}
+
+.card-img-top{
+  justify: middle;
 }
