@@ -6,7 +6,7 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {AboutUsComponent} from './about-us/about-us.component';
 import {ContactComponent} from './contact/contact.component';
 import {TrackersComponent} from './trackers/trackers.component';
-import {TrackComponent} from './track/track.component';
+import {FoundComponent} from './found/found.component';
 import {ReturnComponent} from './return/return.component';
 import {HiwComponent} from './hiw/hiw.component';
 
@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent},
   { path: 'hiw', component: HiwComponent},
   { path: 'trackers', component: TrackersComponent},
-  { path: 'track', component: TrackComponent},
+  { path: 'found', component: FoundComponent},
   { path: 'return', component: ReturnComponent},
   { path: 'auth', component: AuthorizeComponent },
   { path: '**', component: PageNotFoundComponent }
