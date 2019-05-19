@@ -1,39 +1,21 @@
-<div id="header" class="d-flex justify-content-center">
-  <h1 class="display-3"> ItMine~</h1>
-  <img src="">
-  <button className="topRightButton" type="button" onClick={this.doSomething()}>D</button>
-</div>
+<!--<button className="topRightButton" type="button" onClick={this.doSomething()}>D</button>-->
 
-<div class="d-flex">
-  <div class="mr-auto p-2">
-    <h1 id="home">ItMine!</h1>
-  </div>
-  <div class="p-2">
-    <ul class="nav nav-pills">
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" routerLink="" role="button"
-           aria-haspopup="true" aria-expanded="false">Lost Item</a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" routerLink="/track"> Track Lost Item </a>
-          <a class="dropdown-item" routerLink="/return"> Return Lost Item </a>
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" routerLink=""
-           role="button" aria-haspopup="true" aria-expanded="false">Our Products</a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" routerLink="/release">New Releases</a>
-          <a class="dropdown-item" routerLink="/trackers">Trackers</a>
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" routerLink=""
-           role="button" aria-haspopup="true" aria-expanded="false">About Us</a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" routerLink="/about">Who We Are</a>
-          <a class="dropdown-item" routerLink="/contact">Contact Us</a>
-        </div>
+<nav class='navbar navbar-light navbar-expand-md bg-transparent'>
+  <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbar-collapse'>
+    <span class='navbar-toggler-icon'></span>
+  </button>
+
+  <div class='collapse navbar-collapse' id='navbar-collapse'>
+    <ul class='navbar-nav mr-auto'>
+      <li class='nav-item active'>
+        <a class='nav-link' routerLink='/'>Home</a>
       </li>
     </ul>
   </div>
-</div>
+
+  <ul class='navbar-nav'>
+    <li class='nav-item'>
+      <a class='nav-link btn btn-info text-light' routerLink='/auth'>Get Protected</a>
+    </li>
+  </ul>
+</nav>
