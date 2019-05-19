@@ -1,26 +1,37 @@
 div {
  margin: 0 auto;
-}
-img {
-  width: 160px;
-  height: 160px;
+  width: 100%;
 }
 
 h1 {
-  position: absolute;
-  top: 50px;
   text-align: center;
   color: black;
-  z-index: 1;
   font-size: 70px;
 }
-ol li {
-  font-size: 25px;
-  margin-top:20px;
+.card-img-top{
+  justify: middle;
 }
-
+img{
+  width:400px;
+  height:400px;
+  border: none;
+}
 h2{
-  margin: 20px;
+  margin: 30px;
   color: #5AB9EA;
   font-size: 35px;
 }
+
+p{
+  font-weight: bold;
+  color: #5680E9;
+}
+
+.jumbotron{
+  background-color: white;
+}
+
+.card {
+  border:none;
+}
+
