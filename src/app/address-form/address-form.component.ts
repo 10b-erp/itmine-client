@@ -19,12 +19,12 @@ export class AddressFormComponent {
   public addressMap: string;
 
   @Input() address;
-  @Output() addressChanged = new EventEmitter<any>();
+  @Output() addressChange = new EventEmitter<any>();
 
   constructor(private server: ServerService) { }
 
   public onAddressChanged() {
-    this.addressChanged.emit({
+    this.addressChange.emit({
       addressLine1: this.addressLine1,
       addressLine2: this.addressLine2,
       cityLocality: this.cityLocality,

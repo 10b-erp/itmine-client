@@ -10,7 +10,6 @@ export class ServerService {
     return new Promise((resolve, reject) => {
       const xhr = new XMLHttpRequest();
       xhr.addEventListener('load', function() {
-        console.log(this.response);
         if (this.response.errorCode === 0) {
           resolve(this.response);
         } else {
@@ -27,6 +26,7 @@ export class ServerService {
     });
   }
 
+  // sign in
   public signIn(email: string, password: string): Promise<ServerResponse> {
     return this.makeApiCall('signin', {
       email: email,
@@ -34,7 +34,33 @@ export class ServerService {
     });
   }
 
+  // sign up
+  public signUp(email: string, password: string, name: string, phone: string, address: any, companyName: string): Promise<ServerResponse> {
+    return this.makeApiCall('signup', {
+      email: email,
+      password: password,
+      address: address,
+      name: name,
+      phone: phone,
+      company: companyName
+    });
+  }
+
+  // validate address using shipengine api
   public validateAddress(address): Promise<AddressServerResponse> {
     return <Promise<AddressServerResponse>> this.makeApiCall('validateaddress', address);
+  }
+
+  // check if signed in
+  public getUserDetails() {
+    this.makeApiCall('userdetails', {})
+      .then(response => {
+        console.log(response);
+      })
+      .catch(err => console.error(err));
+  }
+
+  constructor() {
+    this.getUserDetails();
   }
 }
