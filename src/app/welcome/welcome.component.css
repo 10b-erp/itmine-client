@@ -1,8 +1,4 @@
 
-#TheBox{
-  max-width: 100% !important;
-  overflow-x: hidden;
-}
 #authenticate li{
   margin-right: 30px;
   display: inline-block;
@@ -47,11 +43,8 @@ img {
   width: 400px;
 }
 
-=======
->>>>>>> a1ac6c29f3f0b19f0f6757574a738135040e52c1
-#logo img {
+#logo{
   transform: rotate(45deg);
-  margin-top: -100px;
 }
 
 @keyframes boomerang {
@@ -62,10 +55,10 @@ img {
     transform: rotate(720deg);
   }
   100%{
-    transform: rotate(-45deg);
+    transform: rotate(45deg);
   }
 }
-#logo img:hover{
+#logo:hover{
   animation-name: boomerang;
   animation-direction: alternate;
   animation-duration: 5s;
@@ -90,4 +83,8 @@ img {
   animation-timing-function: ease-in-out;
   animation-duration: .2s;
   animation-fill-mode: forwards;
+}
+
+p{
+  font-weight: bolder;
 }
