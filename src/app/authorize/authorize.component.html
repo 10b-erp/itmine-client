@@ -17,6 +17,14 @@
           </div>
         </div>
         <div class='collapse' id='toggleSignup'>
+          <div class='form-row'>
+            <div class='form-group col-12'>
+              <label class='d-block'>
+                Name
+                <input class='form-control' type='text' [(ngModel)]='userName'>
+              </label>
+            </div>
+          </div>
           <app-address-form [(address)]='address'></app-address-form>
         </div>
         <div class='form-group'>

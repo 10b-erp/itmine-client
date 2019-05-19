@@ -12,6 +12,7 @@ export class AuthorizeComponent implements OnInit {
 
   public userEmail: string;
   public userPassword: string;
+  public userName: string;
 
   public address = {
     addressLine1: '',

@@ -45,7 +45,14 @@ export class AddressFormComponent {
       postalCode: this.postalCode,
       countryCode: this.countryCode
     })
-      .then(response => console.log(response))
+      .then(response => {
+        this.addressLine1 = response.additionalData.address_line1;
+        // this.addressLine2 = response.additionalData.address_line2;
+        this.cityLocality = response.additionalData.city_locality;
+        this.stateProvince = response.additionalData.state_province;
+        this.postalCode = response.additionalData.postal_code;
+        this.countryCode = response.additionalData.country_code;
+      })
       .catch(err => console.error(err));
   }
 
