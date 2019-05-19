@@ -15,7 +15,8 @@
 
   <ul class='navbar-nav'>
     <li class='nav-item'>
-      <a class='nav-link btn btn-info text-light' routerLink='/auth'>Get Protected</a>
+      <a class='nav-link btn btn-info text-light' routerLink='/auth' *ngIf='!isSignedIn'>Get Protected</a>
+      <a class='nav-link' *ngIf='isSignedIn' (click)='signOut()'>Sign out</a>
     </li>
   </ul>
 </nav>

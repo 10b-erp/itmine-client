@@ -1,9 +1,13 @@
 import { Injectable } from '@angular/core';
+import {BehaviorSubject} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServerService {
+
+  // observable to track when signed in
+  public userDetails = new BehaviorSubject<any>(null);
 
   // private function to run api call
   private makeApiCall(endpoint: string, data: any): Promise<ServerResponse> {
@@ -46,6 +50,11 @@ export class ServerService {
     });
   }
 
+  // sign out
+  public signOut() {
+    return this.makeApiCall('signout', {});
+  }
+
   // validate address using shipengine api
   public validateAddress(address): Promise<any> {
     return <Promise<any>> this.makeApiCall('validateaddress', address);
@@ -55,12 +64,16 @@ export class ServerService {
   public getUserDetails() {
     this.makeApiCall('userdetails', {})
       .then(response => {
-        console.log(response);
+        this.userDetails.next(response);
       })
-      .catch(err => console.error(err));
+      .catch(err => {
+        // 4 is successful sign out
+        if (err.errorCode === 4) {
+          this.userDetails.next(null);
+        } else {
+          console.error(err.errorMessage);
+        }
+      });
   }
 
-  constructor() {
-    this.getUserDetails();
-  }
 }
